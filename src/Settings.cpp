@@ -90,7 +90,7 @@ void Settings::load() {
   }
 
   QStringList defaultPoolList;
-  defaultPoolList << "qwertycoin.site:3333";
+  defaultPoolList << "qwertycoin.site:3333" << "78.46.85.142:8261";
   if (!m_settings.contains(OPTION_MINING_POOLS)) {
     setMiningPoolList(QStringList() << defaultPoolList);
   } else {
@@ -104,7 +104,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "node-00.qwertycoin.org:8197" << "46.38.242.66:8197" << "node-01.qwertycoin.org:8197";
+  defaultNodesList << "random.qwertycoin.org:8197" << "asia.node.qwertycoin.org:8197" << "eu.node.qwertycoin.org:8197" << "us.node.qwertycoin.org:8197";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
