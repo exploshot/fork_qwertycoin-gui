@@ -104,7 +104,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "random.qwertycoin.org:8197" << "asia.node.qwertycoin.org:8197" << "eu.node.qwertycoin.org:8197" << "us.node.qwertycoin.org:8197";
+  defaultNodesList << "pool.qwertyno.de:8197" << "as.qwertyno.de:8197" << "eu.qwertyno.de:8197" << "na.qwertyno.de:8197"  << "sa.qwertyno.de:8197" << "au.qwertyno.de:8197" << "af.qwertyno.de:8197" << "an.qwertyno.de:8197" << "oc.qwertyno.de:8197";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
