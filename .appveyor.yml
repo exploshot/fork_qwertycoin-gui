@@ -7,6 +7,7 @@ environment:
 
 clone_script:
     - cmd: git clone -q --recursive --branch=master https://github.com/qwertycoin-org/qwertycoin.git cryptonote
+    - cmd: dir
 
 build_script:
     - md build
