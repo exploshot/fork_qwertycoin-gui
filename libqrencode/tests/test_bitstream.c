@@ -55,7 +55,7 @@ void test_appendNum(void)
 	BitStream_appendNum(bstream,  8, 0x0000008a);
 	assert_zero(ncmpBin(correct, bstream, 8), "Internal data is incorrect.\n");
 
-	BitStream_appendNum(bstream, 16, 0x0000ffff);
+	BitStream_appendNum(bstream, 16, 0x000000ff);
 	assert_zero(ncmpBin(correct, bstream, 24), "Internal data is incorrect.\n");
 
 	BitStream_appendNum(bstream, 32, 0x12345678);
