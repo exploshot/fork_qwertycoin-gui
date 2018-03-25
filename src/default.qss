@@ -6,6 +6,14 @@
 	color: #41548D;
 }
 
+QLabel {
+	color: #A2A2A2;
+}
+
+.conlabel {
+	color: #000000;
+}
+
 QTabBar {
 	background-color: #2d3e50;
 }
@@ -53,22 +61,25 @@ QMenuBar::item:pressed {
 
 QDialog {
 	background-color:#3c546e;
+	color:#000000;
 }
 
 QTreeView {
     show-decoration-selected: 1;
+    color:#3c546e;
 }
 
 QTreeView::item {
-     border: 1px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
     border-top-color: transparent;
     border-bottom-color: transparent;
+    color:#3c546e;
 }
 
 QTreeView::item:hover {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #e7effd, stop: 1 #cbdaf1);
     border: 1px solid #bfcde4;
-    color:#3c546e;
+    text-color:#080808;
 }
 
 QTreeView::item:selected {
@@ -83,6 +94,7 @@ QTreeView::item:selected:active{
 
 QTreeView::item:selected:!active {
     background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1, stop: 0 #6b9be8, stop: 1 #577fbf);
+    color:#3c546e;
 }
 
 QPushButton, QToolButton {
@@ -150,8 +162,11 @@ QTextEdit {
 	selection-background-color: #6481AA;
 }
 
-QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus, QTextEdit:focus {
+
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QComboBox:focus, QComboBox:editable, QComboBox:hover, QTextEdit:focus {
 	border: 1px solid #27496d;
+	background: #080808;
+	selection-background-color: #6481AA;
 }
 
 QSpinBox, QDoubleSpinBox, QComboBox {
@@ -209,9 +224,9 @@ QComboBox::drop-down {
 
 QComboBox QAbstractItemView {
 	border: none;
-	background: white;
-	color: #080808;
-	selection-background-color: rgba(52, 73, 94, 0.2);
+	background: #080808;
+	color: white;
+	selection-background-color: #654321;
 }
 
 QComboBox:item {
@@ -221,7 +236,7 @@ QComboBox:item {
 }
 
 QComboBox:item:selected {
-	background-color: rgba(52, 73, 94, 0.1);
+	background-color: #654321;
 	border: none;
 }
 
@@ -320,7 +335,7 @@ QToolBar#toolBar QToolButton{
 	margin: 0;
 	spacing:0px;
 	width: 150px;
-	color: #ffffff;
+	color: #FFFFFF;
 	border: none;
 	border-radius: 0;
 	min-width: 150px;
@@ -369,8 +384,8 @@ QStatusBar#statusBar {
 }
 
 QToolTip{
-	color: #ffffff;
-	background-color: #233E69;
+	color: #FFFFFF;
+	background-color: #080808;
 	border: none;
 	padding: 4px;
 	opacity: 230;

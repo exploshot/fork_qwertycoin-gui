@@ -14,7 +14,7 @@
 #include <QDebug>
 
 namespace Ui {
-class ConnectionSettingsDialog;
+    class ConnectionSettingsDialog;
 }
 
 namespace WalletGui {
@@ -24,7 +24,7 @@ ConnectionSettingsDialog::ConnectionSettingsDialog(QWidget* _parent) : QDialog(_
     m_ui(new Ui::ConnectionSettingsDialog) {
     m_ui->setupUi(this);
     m_ui->remoteNodesComboBox->setModel(m_nodeModel);
-//  m_ui->remoteNodesComboBox->setValidator(new QRegExpValidator( QRegExp("[^\\:]+:[0-9]"), this ));
+    //m_ui->remoteNodesComboBox->setValidator(new QRegExpValidator( QRegExp("[^\\:]+:[0-9]"), this ));
 }
 
 ConnectionSettingsDialog::~ConnectionSettingsDialog() {
