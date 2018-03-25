@@ -6,6 +6,7 @@ environment:
     CMAKE_PREFIX_PATH: C:\Qt\5.9.4\msvc2015_64
 
 clone_script:
+    - cmd: git clone -q --recursive --branch=dev https://github.com/qwertycoin-org/qwertycoin-gui.git
     - cmd: git clone -q --recursive --branch=master https://github.com/qwertycoin-org/qwertycoin.git cryptonote
     - cmd: dir
 
