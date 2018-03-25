@@ -1,5 +1,5 @@
 * {
-	color: #FFFFFF;
+	color: #A2A2A2;
 }
 
 *:disabled {
@@ -7,7 +7,7 @@
 }
 
 QLabel {
-	color: #A2A2A2;
+	color: #FFFFFF;
 }
 
 .conlabel {
