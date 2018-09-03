@@ -24,7 +24,6 @@ AddressBookFrame::AddressBookFrame(QWidget* _parent) : QFrame(_parent), m_ui(new
   m_ui->m_addressBookView->header()->setStretchLastSection(false);
   m_ui->m_addressBookView->header()->setSectionResizeMode(1, QHeaderView::Stretch);
   m_ui->m_addressBookView->setSortingEnabled(true);
-  m_ui->m_addressBookView->setStyleSheet(QStringLiteral("color: #080808;")); //tablehead
   m_ui->m_addressBookView->sortByColumn(0, Qt::AscendingOrder);
 
   connect(m_ui->m_addressBookView->selectionModel(), &QItemSelectionModel::currentChanged, this, &AddressBookFrame::currentAddressChanged);
@@ -33,6 +32,7 @@ AddressBookFrame::AddressBookFrame(QWidget* _parent) : QFrame(_parent), m_ui(new
   connect(m_ui->m_addressBookView, SIGNAL(customContextMenuRequested(const QPoint &)), this, SLOT(onCustomContextMenu(const QPoint &)));
 
   contextMenu = new QMenu();
+  contextMenu->addAction(QString(tr("&Pay to")), this, SLOT(payToClicked()));
   contextMenu->addAction(QString(tr("Copy &label")), this, SLOT(copyLabelClicked()));
   contextMenu->addAction(QString(tr("Copy &address")), this, SLOT(copyClicked()));
   contextMenu->addAction(QString(tr("Copy Payment &ID")), this, SLOT(copyPaymentIdClicked()));
@@ -45,6 +45,8 @@ AddressBookFrame::~AddressBookFrame() {
 
 void AddressBookFrame::onCustomContextMenu(const QPoint &point) {
   index = m_ui->m_addressBookView->indexAt(point);
+  if (!index.isValid())
+    return;
   contextMenu->exec(m_ui->m_addressBookView->mapToGlobal(point));
 }
 
@@ -152,6 +154,18 @@ void AddressBookFrame::deleteClicked() {
   AddressBookModel::instance().removeAddress(row);
   m_ui->m_copyPaymentIdButton->setEnabled(false);
   currentAddressChanged(m_ui->m_addressBookView->currentIndex());
+}
+
+void AddressBookFrame::payToClicked() {
+  Q_EMIT payToSignal(m_ui->m_addressBookView->currentIndex());
+}
+
+void AddressBookFrame::addressDoubleClicked(const QModelIndex& _index) {
+  if (!_index.isValid()) {
+    return;
+  }
+
+  Q_EMIT payToSignal(_index);
 }
 
 void AddressBookFrame::currentAddressChanged(const QModelIndex& _index) {

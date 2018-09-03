@@ -28,6 +28,7 @@ Q_DECL_CONSTEXPR char OPTION_RPCNODES[] = "remoteNodes";
 Q_DECL_CONSTEXPR char OPTION_DAEMON_PORT[] = "daemonPort";
 Q_DECL_CONSTEXPR char OPTION_REMOTE_NODE[] = "remoteNode";
 Q_DECL_CONSTEXPR char OPTION_CURRENT_POOL[] = "currentPool";
+const char OPTION_WALLET_THEME[] = "theme";
 
 Settings& Settings::instance() {
   static Settings inst;
@@ -90,7 +91,7 @@ void Settings::load() {
   }
 
   QStringList defaultPoolList;
-  defaultPoolList << "qwertycoin.site:3333" << "qwcpool.partyvibe.com:5000" << "qwc.pool.ahka.net:5557";
+  defaultPoolList << "qwertycoin.site:3333" << "pool.qwertycoin.org:3333" << "qwcpool.partyvibe.com:2000";
   if (!m_settings.contains(OPTION_MINING_POOLS)) {
     setMiningPoolList(QStringList() << defaultPoolList);
   } else {
@@ -104,7 +105,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "eu.qwertyno.de:8197" << "na.qwertyno.de:8197" << "sa.qwertyno.de:8197" << "au.qwertyno.de:8197" << "af.qwertyno.de:8197" << "an.qwertyno.de:8197" << "as.qwertyno.de:8197" << "oc.qwertyno.de:8197";
+  defaultNodesList << "eu.qwertyno.de:8197" << "au.qwertyno.de:8197" << "na.qwertyno.de:8197" << "sa.qwertyno.de:8197";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -220,12 +221,16 @@ QStringList Settings::getMiningPoolList() const {
   return res;
 }
 
+QString Settings::getCurrentTheme() const {
+  return m_settings.contains(OPTION_WALLET_THEME) ? m_settings.value(OPTION_WALLET_THEME).toString() : "light";
+}
+
 QString Settings::getLanguage() const {
-    QString currentLang;
-    if (m_settings.contains(OPTION_LANGUAGE)) {
-        currentLang = m_settings.value(OPTION_LANGUAGE).toString();
-    }
-    return currentLang;
+  QString currentLang;
+  if (m_settings.contains(OPTION_LANGUAGE)) {
+    currentLang = m_settings.value(OPTION_LANGUAGE).toString();
+  }
+  return currentLang;
 }
 
 QString Settings::getConnection() const {

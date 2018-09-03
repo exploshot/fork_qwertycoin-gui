@@ -1,13 +1,27 @@
 // Copyright (c) 2011-2016 The Cryptonote developers
 // Copyright (c) 2011-2013 The Bitcoin Core developers
 // Copyright (c) 2015-2016 XDN developers
-// Copyright (c) 2016-2017 The Karbowanec developers
-// Copyright (c) 2017-2018 The Qwertycoin developers
-// Distributed under the MIT/X11 software license, see the accompanying
-// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+// Copyright (c) 2017-2018, The karbo developers
+// Copyright (c) 2018, The Qwertcoin developers
+//
+// This file is part of Qwertycoin.
+//
+// Qwertycoin is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Lesser General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Qwertycoin is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Lesser General Public License for more details.
+//
+// You should have received a copy of the GNU Lesser General Public License
+// along with Qwertycoin. If not, see <http://www.gnu.org/licenses/>.
 
 #include <QCloseEvent>
 #include <QFileDialog>
+#include <QStandardPaths>
 #include <QInputDialog>
 #include <QMessageBox>
 #include <QSystemTrayIcon>
@@ -23,6 +37,7 @@
 #include <QPushButton>
 #include "AboutDialog.h"
 #include "AnimatedLabel.h"
+#include "AddressBookModel.h"
 #include "ChangePasswordDialog.h"
 #include "ChangeLanguageDialog.h"
 #include "ConnectionSettings.h"
@@ -44,6 +59,7 @@
 #include "InfoDialog.h"
 #include "ui_mainwindow.h"
 #include "MnemonicSeedDialog.h"
+#include "ConfirmSendDialog.h"
 
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
@@ -74,7 +90,7 @@ MainWindow::MainWindow() : QMainWindow(), m_ui(new Ui::MainWindow), m_trayIcon(n
   m_ui->setupUi(this);
   m_connectionStateIconLabel = new QPushButton();
   m_connectionStateIconLabel->setFlat(true); // Make the button look like a label, but clickable
-  m_connectionStateIconLabel->setStyleSheet(".QPushButton { background-color: rgba(8, 8, 8, 0);}");
+  m_connectionStateIconLabel->setStyleSheet(".QPushButton { background-color: rgba(255, 255, 255, 0);}");
   m_connectionStateIconLabel->setMaximumSize(16, 16);
   m_encryptionStateIconLabel = new QLabel(this);
   m_trackingModeIconLabel = new QLabel(this);
@@ -109,10 +125,20 @@ void MainWindow::connectToSignals() {
       QApplication::alert(this);
   });
   
+  connect(&WalletAdapter::instance(), &WalletAdapter::walletUnmixableBalanceUpdatedSignal, this, &MainWindow::updateUnmixableBalance,
+    Qt::QueuedConnection);
+  connect(&WalletAdapter::instance(), &WalletAdapter::walletSendTransactionCompletedSignal, this, [this](CryptoNote::TransactionId _transactionId, int _error, const QString& _errorString) {
+    if (_error == 0) {
+      m_ui->m_transactionsAction->setChecked(true);
+    }
+  });
   connect(&NodeAdapter::instance(), &NodeAdapter::peerCountUpdatedSignal, this, &MainWindow::peerCountUpdated, Qt::QueuedConnection);
   connect(m_ui->m_exitAction, &QAction::triggered, qApp, &QApplication::quit);
   connect(m_ui->m_accountFrame, &AccountFrame::showQRcodeSignal, this, &MainWindow::onShowQR, Qt::QueuedConnection);
   connect(m_ui->m_sendFrame, &SendFrame::uriOpenSignal, this, &MainWindow::onUriOpenSignal, Qt::QueuedConnection);
+  connect(m_ui->m_noWalletFrame, &NoWalletFrame::createWalletClickedSignal, this, &MainWindow::createWallet, Qt::QueuedConnection);
+  connect(m_ui->m_noWalletFrame, &NoWalletFrame::openWalletClickedSignal, this, &MainWindow::openWallet, Qt::QueuedConnection);
+  connect(m_ui->m_addressBookFrame, &AddressBookFrame::payToSignal, this, &MainWindow::payTo);
   connect(m_connectionStateIconLabel, SIGNAL(clicked()), this, SLOT(showStatusInfo()));
 }
 
@@ -296,7 +322,9 @@ bool MainWindow::event(QEvent* _event) {
 void MainWindow::createWallet() {
   QString filePath = QFileDialog::getSaveFileName(this, tr("New wallet file"),
   #ifdef Q_OS_WIN
-      QApplication::applicationDirPath(),
+      //QApplication::applicationDirPath(),
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
+
   #else
       QDir::homePath(),
   #endif
@@ -324,7 +352,8 @@ void MainWindow::createWallet() {
 void MainWindow::createNonDeterministicWallet() {
   QString filePath = QFileDialog::getSaveFileName(this, tr("New wallet file"),
   #ifdef Q_OS_WIN
-      QApplication::applicationDirPath(),
+      //QApplication::applicationDirPath(),
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
   #else
       QDir::homePath(),
   #endif
@@ -352,7 +381,8 @@ void MainWindow::createNonDeterministicWallet() {
 void MainWindow::openWallet() {
   QString filePath = QFileDialog::getOpenFileName(this, tr("Open .wallet/.keys file"),
 #ifdef Q_OS_WIN
-    QApplication::applicationDirPath(),
+    //QApplication::applicationDirPath(),
+      QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
 #else
     QDir::homePath(),
 #endif
@@ -432,8 +462,8 @@ void MainWindow::importTrackingKey() {
       return;
     }
 
-    if (!filePath.endsWith(".trackingwallet")) {
-      filePath.append(".trackingwallet");
+    if (!filePath.endsWith(".wallet")) {
+      filePath.append(".wallet");
     }
 
     CryptoNote::AccountKeys keys;
@@ -501,6 +531,7 @@ void MainWindow::isTrackingMode() {
   m_ui->m_sendAction->setEnabled(false);
   m_ui->m_openUriAction->setEnabled(false);
   m_ui->m_showMnemonicSeedAction->setEnabled(false);
+  m_ui->m_sweepUnmixableAction->setEnabled(false);
   m_trackingModeIconLabel->show();
 }
 
@@ -534,6 +565,22 @@ void MainWindow::restoreFromMnemonicSeed() {
       QMessageBox::critical(nullptr, tr("Mnemonic seed is not correct"), tr("There must be an error in mnemonic seed. Make sure you entered it correctly."), QMessageBox::Ok);
       return;
     }
+  }
+}
+
+void MainWindow::sweepUnmixable() {
+  quint64 dust = WalletAdapter::instance().getUnmixableBalance();
+  ConfirmSendDialog dlg(&MainWindow::instance());
+  dlg.showPasymentDetails(dust);
+  if (dlg.exec() == QDialog::Accepted) {
+    quint64 fee = CurrencyAdapter::instance().getMinimumFee();
+    QVector<CryptoNote::WalletLegacyTransfer> walletTransfers;
+    CryptoNote::WalletLegacyTransfer walletTransfer;
+    walletTransfer.address = WalletAdapter::instance().getAddress().toStdString();
+    walletTransfer.amount = dust;
+    walletTransfers.push_back(walletTransfer);
+
+    WalletAdapter::instance().sweepDust(walletTransfers, fee, "", 0);
   }
 }
 
@@ -591,7 +638,8 @@ void MainWindow::showStatusInfo() {
 void MainWindow::backupWallet() {
   QString filePath = QFileDialog::getSaveFileName(this, tr("Backup wallet to..."),
   #ifdef Q_OS_WIN
-      QApplication::applicationDirPath(),
+      //QApplication::applicationDirPath(),
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation),
   #else
       QDir::homePath(),
   #endif
@@ -810,7 +858,8 @@ void MainWindow::walletSynchronized(int _error, const QString& _error_text) {
 
 void MainWindow::walletOpened(bool _error, const QString& _error_text) {
   if (!_error) {
-    m_ui->accountToolBar->show();
+    m_ui->m_noWalletFrame->hide();
+      m_ui->accountToolBar->show();
     m_ui->m_closeWalletAction->setEnabled(true);
     m_ui->m_exportTrackingKeyAction->setEnabled(true);
     m_encryptionStateIconLabel->show();
@@ -819,6 +868,7 @@ void MainWindow::walletOpened(bool _error, const QString& _error_text) {
     m_ui->m_showPrivateKey->setEnabled(true);
     m_ui->m_resetAction->setEnabled(true);
     m_ui->m_openUriAction->setEnabled(true);
+    m_ui->m_sweepUnmixableAction->setEnabled(true);
     if(WalletAdapter::instance().isDeterministic()) {
        m_ui->m_showMnemonicSeedAction->setEnabled(true);
     }
@@ -858,6 +908,7 @@ void MainWindow::walletClosed() {
   m_ui->m_showPrivateKey->setEnabled(false);
   m_ui->m_resetAction->setEnabled(false);
   m_ui->m_showMnemonicSeedAction->setEnabled(false);
+  m_ui->m_sweepUnmixableAction->setEnabled(false);
   m_ui->m_overviewFrame->hide();
   accountWidget->setVisible(false);
   m_ui->m_receiveFrame->hide();
@@ -865,6 +916,7 @@ void MainWindow::walletClosed() {
   m_ui->m_transactionsFrame->hide();
   m_ui->m_addressBookFrame->hide();
   //m_ui->m_miningFrame->hide();
+  m_ui->m_noWalletFrame->show();
   m_encryptionStateIconLabel->hide();
   m_trackingModeIconLabel->hide();
   m_synchronizationStateIconLabel->hide();
@@ -884,6 +936,14 @@ void MainWindow::checkTrackingMode() {
     Settings::instance().setTrackingMode(true);
   } else {
     Settings::instance().setTrackingMode(false);
+  }
+}
+
+void MainWindow::updateUnmixableBalance(quint64 _balance) {
+  if (_balance != 0) {
+      m_ui->m_sweepUnmixableAction->setEnabled(true);
+  } else {
+      m_ui->m_sweepUnmixableAction->setEnabled(false);
   }
 }
 
@@ -937,6 +997,11 @@ void MainWindow::createTrayIconMenu()
     trayIconMenu->addSeparator();
     trayIconMenu->addAction(m_ui->m_exitAction);
 #endif
+}
+
+void MainWindow::payTo(const QModelIndex& _index) {
+  m_ui->m_sendFrame->setAddress(_index.data(AddressBookModel::ROLE_ADDRESS).toString());
+  m_ui->m_sendAction->trigger();
 }
 
 #ifdef Q_OS_WIN

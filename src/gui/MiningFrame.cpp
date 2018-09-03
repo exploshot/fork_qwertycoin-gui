@@ -1,7 +1,7 @@
 // Copyright (c) 2011-2016 The Cryptonote developers
 // Copyright (c) 2015-2016 XDN developers
 // Copyright (c) 2016-2017 The Karbowanec developers
-// Copyright (c) 2017-2018 The Qwertycoin developers
+// Copyright (c) 2018 The Qwertycoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -176,7 +176,7 @@ void MiningFrame::stopMining() {
 
 void MiningFrame::startSolo() {
   NodeAdapter::instance().startSoloMining(m_walletAddress, m_ui->m_cpuCombo->currentData().toUInt());
-  m_ui->m_soloLabel->setText(tr("Starting solo minining..."));
+  m_ui->m_soloLabel->setText(tr("Starting solo mining..."));
   m_soloHashRateTimerId = startTimer(HASHRATE_TIMER_INTERVAL);
 
   m_ui->m_startSolo->setEnabled(false);
