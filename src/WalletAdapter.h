@@ -1,22 +1,8 @@
 // Copyright (c) 2011-2016 The Cryptonote developers
 // Copyright (c) 2015-2016 XDN developers
-// Copyright (c) 2017-2018, The karbo developers
-// Copyright (c) 2018, The Qwertcoin developers
-//
-// This file is part of Qwertycoin.
-//
-// Qwertycoin is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Lesser General Public License as published by
-// the Free Software Foundation, either version 3 of the License, or
-// (at your option) any later version.
-//
-// Qwertycoin is distributed in the hope that it will be useful,
-// but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-// GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with Qwertycoin. If not, see <http://www.gnu.org/licenses/>.
+// Copyright (c) 2016-2017 The Karbowanec developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #pragma once
 
@@ -25,10 +11,12 @@
 #include <QTimer>
 #include <QPushButton>
 
+#include <list>
 #include <atomic>
 #include <fstream>
 
 #include <IWalletLegacy.h>
+#include <ITransfersContainer.h>
 
 namespace WalletGui {
 
@@ -58,11 +46,19 @@ public:
   bool getTransaction(CryptoNote::TransactionId& _id, CryptoNote::WalletLegacyTransaction& _transaction);
   bool getTransfer(CryptoNote::TransferId& _id, CryptoNote::WalletLegacyTransfer& _transfer);
   bool getAccountKeys(CryptoNote::AccountKeys& _keys);
+  QString getTxProof(Crypto::Hash& _txid, CryptoNote::AccountPublicAddress& _address, Crypto::SecretKey& _tx_key);
+  QString getReserveProof(const quint64 &_reserve, const QString &_message);
+  size_t getUnlockedOutputsCount();
   bool isOpen() const;
-  void sendTransaction(const QVector<CryptoNote::WalletLegacyTransfer>& _transfers, quint64 _fee, const QString& _payment_id, quint64 _mixin);
-  void sweepDust(const QVector<CryptoNote::WalletLegacyTransfer>& _transfers, quint64 _fee, const QString& _payment_id, quint64 _mixin);  
+  void sendTransaction(const std::vector<CryptoNote::WalletLegacyTransfer>& _transfers, quint64 _fee, const QString& _payment_id, quint64 _mixin);
+  void sweepDust(const std::vector<CryptoNote::WalletLegacyTransfer>& _transfers, quint64 _fee, const QString& _payment_id, quint64 _mixin);
   bool changePassword(const QString& _old_pass, const QString& _new_pass);
   void setWalletFile(const QString& _path);
+  Crypto::SecretKey getTxKey(Crypto::Hash& txid);
+
+  quint64 estimateFusion(quint64 _threshold);
+  std::list<CryptoNote::TransactionOutputInformation> getFusionTransfersToSend(quint64 _threshold, size_t _min_input_count, size_t _max_input_count);
+  void sendFusionTransaction(const std::list<CryptoNote::TransactionOutputInformation>& _fusion_inputs, quint64 _fee, const QString& _extra, quint64 _mixin);
 
   void initCompleted(std::error_code _result) Q_DECL_OVERRIDE;
   void saveCompleted(std::error_code _result) Q_DECL_OVERRIDE;

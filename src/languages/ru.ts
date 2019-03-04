@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU" sourcelanguage="en">
+<TS version="2.0" language="ru_RU" sourcelanguage="en">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -12,19 +12,19 @@
         <translation>Закрыть</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017-2018. Qwertycoin Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin версия %1&lt;/p&gt;&lt;p&gt;Это криптовалюта нового поколения на базе CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017-2018. Qwertycoin Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Karbowanec v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin версия %1&lt;/p&gt;&lt;p&gt;Это криптовалюта нового поколения на базе CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2017. Karbowanec Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2016. Bytecoin Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2018. Karbo (Karbowanec) Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017-2018. Qwertycoin Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin в. %1&lt;/p&gt;&lt;p&gt;Это криптовалюта нового поколения на базе CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2016. Bytecoin Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2018. Karbo (Karbowanec) Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2017-2018. Qwertycoin Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ &amp;quot;КАК ЕСТЬ&amp;quot;, БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНО ВЫРАЖЕННЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ, СООТВЕТСТВИЯ ПО ЕГО КОНКРЕТНОМУ НАЗНАЧЕНИЮ И ОТСУТСТВИЯ НАРУШЕНИЙ, НО НЕ ОГРАНИЧИВАЯСЬ ИМИ. НИ В КАКОМ СЛУЧАЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ПО КАКИМ-ЛИБО ИСКАМ, ЗА УЩЕРБ ИЛИ ПО ИНЫМ ТРЕБОВАНИЯМ, В ТОМ ЧИСЛЕ, ПРИ ДЕЙСТВИИ КОНТРАКТА, ДЕЛИКТЕ ИЛИ ИНОЙ СИТУАЦИИ, ВОЗНИКШИМ ИЗ-ЗА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ИЛИ ИНЫХ ДЕЙСТВИЙ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin v. %1&lt;/p&gt;&lt;p&gt;This is the next generation anonymous cryptocurrency based on CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2016. Bytecoin Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2018. Karbo (Karbowanec) Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;THE SOFTWARE IS PROVIDED &amp;quot;AS IS&amp;quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Qwertycoin в. %1&lt;/p&gt;&lt;p&gt;Это криптовалюта нового поколения на базе CryptoNote.&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2015. CryptoNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2012-2016. Bytecoin Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2015-2016. DigitalNote Developers&lt;/p&gt;&lt;p&gt;Copyright (c) 2016-2018. Karbo (Karbowanec) Developers&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://opensource.org/licenses/MIT&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;http://opensource.org/licenses/MIT&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://cryptonote.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://cryptonote.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;https://qwertycoin.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://qwertycoin.org/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;ДАННОЕ ПРОГРАММНОЕ ОБЕСПЕЧЕНИЕ ПРЕДОСТАВЛЯЕТСЯ &amp;quot;КАК ЕСТЬ&amp;quot;, БЕЗ КАКИХ-ЛИБО ГАРАНТИЙ, ЯВНО ВЫРАЖЕННЫХ ИЛИ ПОДРАЗУМЕВАЕМЫХ, ВКЛЮЧАЯ ГАРАНТИИ ТОВАРНОЙ ПРИГОДНОСТИ, СООТВЕТСТВИЯ ПО ЕГО КОНКРЕТНОМУ НАЗНАЧЕНИЮ И ОТСУТСТВИЯ НАРУШЕНИЙ, НО НЕ ОГРАНИЧИВАЯСЬ ИМИ. НИ В КАКОМ СЛУЧАЕ АВТОРЫ ИЛИ ПРАВООБЛАДАТЕЛИ НЕ НЕСУТ ОТВЕТСТВЕННОСТИ ПО КАКИМ-ЛИБО ИСКАМ, ЗА УЩЕРБ ИЛИ ПО ИНЫМ ТРЕБОВАНИЯМ, В ТОМ ЧИСЛЕ, ПРИ ДЕЙСТВИИ КОНТРАКТА, ДЕЛИКТЕ ИЛИ ИНОЙ СИТУАЦИИ, ВОЗНИКШИМ ИЗ-ЗА ИСПОЛЬЗОВАНИЯ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ИЛИ ИНЫХ ДЕЙСТВИЙ С ПРОГРАММНЫМ ОБЕСПЕЧЕНИЕМ.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>AccountFrame</name>
     <message>
         <source>Address:</source>
-        <translation type="vanished">Адрес:</translation>
+        <translation>Адрес:</translation>
     </message>
     <message>
         <source>...</source>
@@ -32,7 +32,7 @@
     </message>
     <message>
         <source>Show private key</source>
-        <translation type="vanished">Показать приватный ключ</translation>
+        <translation>Показать приватный ключ</translation>
     </message>
     <message>
         <source>Your account:</source>
@@ -40,7 +40,7 @@
     </message>
     <message>
         <source>Your receiving address</source>
-        <translation>Ваш адрес для получения карбованцев</translation>
+        <translation>Ваш адрес для получения Qwertycoin</translation>
     </message>
     <message>
         <source>This is your account address</source>
@@ -56,7 +56,7 @@
     </message>
     <message>
         <source> qwc</source>
-        <translation> QWC.</translation>
+        <translation> крб.</translation>
     </message>
     <message>
         <source>Frame</source>
@@ -68,7 +68,7 @@
     </message>
     <message>
         <source>0.00</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0.00</translation>
     </message>
 </context>
 <context>
@@ -90,11 +90,11 @@
     </message>
     <message>
         <source>New address</source>
-        <translation type="vanished">Добавить адрес</translation>
+        <translation>Добавить адрес</translation>
     </message>
     <message>
         <source>Delete address</source>
-        <translation type="vanished">Удалить адрес</translation>
+        <translation>Удалить адрес</translation>
     </message>
     <message>
         <source>Copy address</source>
@@ -207,11 +207,11 @@
     <name>ConfirmSendDialog</name>
     <message>
         <source>Confirm sending %1 QWC</source>
-        <translation>Подтвердите отправку %1 QWC.</translation>
+        <translation>Подтвердите отправку %1 крб.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Are you sure you want to send &lt;strong&gt;%1 QWC&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Желаете выслать &lt;strong&gt;%1 QWC.&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Желаете выслать &lt;strong&gt;%1 крб.&lt;/strong&gt;?&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -273,12 +273,12 @@
         <translation>Добавить узел</translation>
     </message>
     <message>
-        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends 0.25% fee from each transaction to the node, but no more than 10 QWC.</source>
-        <translation>Кошелек будет подключаться к удаленному узлу в локальной или глобальной сети. Выберите узел или укажите IP адрес или домен и порт чтобы добавить новый. В этом режиме кошелек платит комиссию узлу в размере 0,25% от суммы транзакции, но не более 10 QWC.</translation>
-    </message>
-    <message>
         <source>Remove node</source>
         <translation>Удалить узел</translation>
+    </message>
+    <message>
+        <source>Wallet will connect to remote node running in local or global network. Please select node or specify IP address or domain name and port. In this mode wallet sends 0.25% fee from each transaction to the node, but no more than 1 QWC.</source>
+        <translation>Кошелек будет подключаться к удаленному узлу в локальной или глобальной сети. Выберите узел или укажите IP адрес или домен и порт чтобы добавить новый. В этом режиме кошелек платит комиссию узлу в размере 0,25% от суммы транзакции, но не более 1 крб.</translation>
     </message>
 </context>
 <context>
@@ -290,7 +290,7 @@
     <message>
         <source>%1 wallet is saving data.
 Please wait...</source>
-        <translation>Кошелек сохраняет данные.
+        <translation>Кошелек %1 сохраняет данные.
 Подождите пожалуйста...</translation>
     </message>
 </context>
@@ -315,6 +315,37 @@ Please wait...</source>
     <message>
         <source>Close</source>
         <translation>Закрыть</translation>
+    </message>
+</context>
+<context>
+    <name>GetBalanceProofDialog</name>
+    <message>
+        <source>Signature</source>
+        <translation>Подпись</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Сообщение</translation>
+    </message>
+    <message>
+        <source>Save to file</source>
+        <translation>Сохранить в файл</translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Закрыть</translation>
+    </message>
+    <message>
+        <source>Amount</source>
+        <translation>Сумма</translation>
+    </message>
+    <message>
+        <source>Get proof of balance</source>
+        <translation>Подтверждение баланса</translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation>Копировать</translation>
     </message>
 </context>
 <context>
@@ -360,7 +391,7 @@ Please wait...</source>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <source>Key:</source>
@@ -490,7 +521,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Address Book</source>
-        <translation type="vanished">Адресная книжка</translation>
+        <translation>Адресная книжка</translation>
     </message>
     <message>
         <source>Create wallet</source>
@@ -558,7 +589,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Show private key</source>
-        <translation type="vanished">Показать приватный ключ</translation>
+        <translation>Показать приватный ключ</translation>
     </message>
     <message>
         <source>F1</source>
@@ -602,11 +633,11 @@ Please wait...</source>
     </message>
     <message>
         <source>Status</source>
-        <translation type="vanished">Состояние</translation>
+        <translation>Состояние</translation>
     </message>
     <message>
         <source>Tools</source>
-        <translation type="vanished">Инструменты</translation>
+        <translation>Инструменты</translation>
     </message>
     <message>
         <source>Open log file</source>
@@ -636,16 +667,28 @@ Please wait...</source>
         <source>Sweep unmixable</source>
         <translation>Убрать несмешиваемые</translation>
     </message>
+    <message>
+        <source>Sign message</source>
+        <translation>Подписать сообщение</translation>
+    </message>
+    <message>
+        <source>Verify signed message</source>
+        <translation>Проверка подписанного сообщения</translation>
+    </message>
+    <message>
+        <source>Optimization</source>
+        <translation>Оптимизация</translation>
+    </message>
+    <message>
+        <source>Get proof of balance</source>
+        <translation>Подтверждение баланса</translation>
+    </message>
 </context>
 <context>
     <name>MiningFrame</name>
     <message>
-        <source>Frame</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Mining status</source>
-        <translation type="vanished">Состояние майнинга</translation>
+        <translation>Состояние майнинга</translation>
     </message>
     <message>
         <source>CPU cores</source>
@@ -669,7 +712,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Pause mining</source>
-        <translation type="vanished">Остановить майнинг</translation>
+        <translation>Остановить майнинг</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -689,7 +732,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Status</source>
-        <translation type="vanished">Состояние</translation>
+        <translation>Состояние</translation>
     </message>
     <message>
         <source>Remove pool</source>
@@ -842,7 +885,7 @@ Please wait...</source>
     </message>
     <message>
         <source>URI:</source>
-        <translation type="unfinished"></translation>
+        <translation>URI:</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -851,6 +894,69 @@ Please wait...</source>
     <message>
         <source>OK</source>
         <translation>Хорошо</translation>
+    </message>
+</context>
+<context>
+    <name>OptimizationSettingsDialog</name>
+    <message>
+        <source>Wallet optimization settings</source>
+        <translation>Настройки оптимизации кошелька</translation>
+    </message>
+    <message>
+        <source>Run background wallet optimization</source>
+        <translation>Выполнять оптимизацию кошелька в фоновом режиме</translation>
+    </message>
+    <message>
+        <source>(Recommended)</source>
+        <translation>(Рекомендуется)</translation>
+    </message>
+    <message>
+        <source>Optimization target</source>
+        <translation>Цель оптимизации</translation>
+    </message>
+    <message>
+        <source>Anonymity level</source>
+        <translation>Уровень анонимности</translation>
+    </message>
+    <message>
+        <source>0</source>
+        <translation type="unfinished">0</translation>
+    </message>
+    <message>
+        <source>outputs below selected target</source>
+        <translation>выходов ниже выбранной цели</translation>
+    </message>
+    <message>
+        <source>From</source>
+        <translation>От</translation>
+    </message>
+    <message>
+        <source>HH:mm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>To</source>
+        <translation>до</translation>
+    </message>
+    <message>
+        <source>Specific time for optimization transactions</source>
+        <translation>Конкретное время для оптимизации</translation>
+    </message>
+    <message>
+        <source>Send optimization transactions each</source>
+        <translation>Отправлять транзакции оптимизации каждые</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>Отменить</translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation>Сохранить</translation>
+    </message>
+    <message>
+        <source>Wallet optimization is a background task performed in order to aggregate transactions outputs that are below optimization target into bigger ones. It allows to send larger amounts of QWC within one transaction. Wallet optimization is free for all users but takes some time.</source>
+        <translation>Оптимизация кошелька - это фоновая задача, выполняемая для суммирования выходов транзакций, которые ниже целевого показателя оптимизации, в более крупные. Это позволяет отправлять большие суммы QWC в одной транзакции. Оптимизация кошелька бесплатна для всех пользователей, но занимает некоторое время.</translation>
     </message>
 </context>
 <context>
@@ -865,7 +971,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Wallet</source>
-        <translation type="vanished">Кошелек</translation>
+        <translation>Кошелек</translation>
     </message>
     <message>
         <source>Unconfirmed:</source>
@@ -873,7 +979,7 @@ Please wait...</source>
     </message>
     <message>
         <source>Balance:</source>
-        <translation type="vanished">Баланс:</translation>
+        <translation>Баланс:</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -943,6 +1049,18 @@ Please wait...</source>
     <message>
         <source>Copy key</source>
         <translation>Скопировать ключ</translation>
+    </message>
+    <message>
+        <source>Private Keys</source>
+        <translation>Приватные ключи</translation>
+    </message>
+    <message>
+        <source>Spend Secret Key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Secret Key</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1045,7 +1163,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation type="obsolete">...</translation>
     </message>
     <message>
         <source>Wallet path:</source>
@@ -1096,7 +1214,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Balance:</source>
-        <translation type="vanished">Баланс:</translation>
+        <translation>Баланс:</translation>
     </message>
     <message>
         <source>Fee:</source>
@@ -1126,6 +1244,34 @@ Do you want to go to download page?</source>
         <source>Available balance:</source>
         <translation>Доступный баланс:</translation>
     </message>
+    <message>
+        <source>Payment ID:</source>
+        <translation>Идентификатор:</translation>
+    </message>
+    <message>
+        <source>Anonymity:</source>
+        <translation>Конфиденциальность:</translation>
+    </message>
+    <message>
+        <source>Priority:</source>
+        <translation>Приоритет:</translation>
+    </message>
+    <message>
+        <source>Manual fee override:</source>
+        <translation>Ручная корректировка комиссии:</translation>
+    </message>
+    <message>
+        <source>Advanced</source>
+        <translation>Продвинутые</translation>
+    </message>
+    <message>
+        <source>Remote mode</source>
+        <translation>Удаленный режим</translation>
+    </message>
+    <message>
+        <source>Send All</source>
+        <translation>Послать все</translation>
+    </message>
 </context>
 <context>
     <name>ShowPaymentRequestDialog</name>
@@ -1152,6 +1298,37 @@ Do you want to go to download page?</source>
     <message>
         <source>Close</source>
         <translation>Закрыть</translation>
+    </message>
+</context>
+<context>
+    <name>SignMessageDialog</name>
+    <message>
+        <source>Sign or verify message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation>Закрыть</translation>
+    </message>
+    <message>
+        <source>Sign message</source>
+        <translation>Подписать сообщение</translation>
+    </message>
+    <message>
+        <source>Message</source>
+        <translation>Сообщение</translation>
+    </message>
+    <message>
+        <source>Signature</source>
+        <translation>Подпись</translation>
+    </message>
+    <message>
+        <source>Verify message</source>
+        <translation>Проверить сообщение</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Адрес</translation>
     </message>
 </context>
 <context>
@@ -1223,11 +1400,11 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Label:</source>
-        <translation type="vanished">Метка:</translation>
+        <translation>Метка:</translation>
     </message>
     <message>
         <source>Add to Contacts:</source>
-        <translation type="vanished">Добавить в контакты:</translation>
+        <translation>Добавить в контакты:</translation>
     </message>
     <message>
         <source>Select recipient from Address Book</source>
@@ -1239,7 +1416,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Save to Contacts:</source>
-        <translation type="vanished">Сохранить в контакты:</translation>
+        <translation>Сохранить в контакты:</translation>
     </message>
     <message>
         <source>Save to Contacts as:</source>
@@ -1299,11 +1476,11 @@ Do you want to go to download page?</source>
     <name>WalletGui::AccountFrame</name>
     <message>
         <source>Hide private keys</source>
-        <translation type="vanished">Скрыть приватные ключи</translation>
+        <translation>Скрыть приватные ключи</translation>
     </message>
     <message>
         <source>Show private keys</source>
-        <translation type="vanished">Показать приватные ключи</translation>
+        <translation>Показать приватные ключи</translation>
     </message>
     <message>
         <source>Copied to clipboard</source>
@@ -1326,7 +1503,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Contact with such label and address already exists.</source>
-        <translation type="vanished">Контакт с таким названием и адресом уже есть.</translation>
+        <translation>Контакт с таким названием и адресом уже есть.</translation>
     </message>
     <message>
         <source>Copy &amp;label</source>
@@ -1447,7 +1624,7 @@ Do you want to go to download page?</source>
     </message>
     <message>
         <source>Qwertycoin wallet</source>
-        <translation>Кошелек карбованца</translation>
+        <translation>Кошелек Qwertycoin</translation>
     </message>
     <message>
         <source>External port for p2p network protocol (if port forwarding used with NAT)</source>
@@ -1458,7 +1635,7 @@ Do you want to go to download page?</source>
     <name>WalletGui::ConfirmSendDialog</name>
     <message>
         <source>Confirm sending %1 QWC</source>
-        <translation>Подтвердите отправку %1 QWC.</translation>
+        <translation>Подтвердите отправку %1 крб.</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Payment ID: %1&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -1478,6 +1655,13 @@ Do you want to go to download page?</source>
     <message>
         <source>Tracking key (*.trackingkey)</source>
         <translation>Ключ слежения (*.trackingkey)</translation>
+    </message>
+</context>
+<context>
+    <name>WalletGui::GetBalanceProofDialog</name>
+    <message>
+        <source>Save as</source>
+        <translation>Сохранить в файл</translation>
     </message>
 </context>
 <context>
@@ -1579,7 +1763,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>%1 peers</source>
-        <translation type="vanished">%1 пиров</translation>
+        <translation>%1 пиров</translation>
     </message>
     <message>
         <source>Synchronization in progress</source>
@@ -1603,7 +1787,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>%1 Wallet %2</source>
-        <translation type="vanished">Qwertycoin в. %2 (%1)</translation>
+        <translation>Qwertycoin в. %2 (%1)</translation>
     </message>
     <message>
         <source>More info can be found at www.qwertycoin.org in Documentation section</source>
@@ -1619,7 +1803,7 @@ Are you sure?</source>
     </message>
     <message>
         <source>Account toolbar</source>
-        <translation type="vanished">Счет</translation>
+        <translation>Счет</translation>
     </message>
     <message>
         <source>Tracking wallet. Spending unawailable</source>
@@ -1631,7 +1815,7 @@ Are you sure?</source>
     </message>
     <message numerus="yes">
         <source>%n peer(s)</source>
-        <translation type="vanished">
+        <translation>
             <numerusform>%n пир</numerusform>
             <numerusform>%n пира</numerusform>
             <numerusform>%n пиров</numerusform>
@@ -1659,15 +1843,15 @@ Are you sure?</source>
     </message>
     <message>
         <source>Total amount: %1, hash: %2</source>
-        <translation type="vanished">Сумма: %1, хеш: %2</translation>
+        <translation>Сумма: %1, хеш: %2</translation>
     </message>
     <message>
         <source>Qwertycoin Wallet</source>
-        <translation type="vanished">Qwertycoin</translation>
+        <translation>Qwertycoin</translation>
     </message>
     <message>
         <source>New transaction received</source>
-        <translation type="vanished">Получена новая транзакция</translation>
+        <translation>Получена новая транзакция</translation>
     </message>
     <message>
         <source>Mnemonic seed is not correct</source>
@@ -1721,12 +1905,24 @@ Are you sure?</source>
         <source>Wrong wallet file extension, wallet file should have &quot;.wallet&quot;, &quot;.keys&quot; or &quot;.trackingwallet&quot; extension.</source>
         <translation>Неверное расширение файла, файл кошелька должен иметь расширение &quot;.wallet&quot;, &quot;.keys&quot; или &quot;.trackingwallet&quot;.</translation>
     </message>
+    <message>
+        <source>Current Language changed to %1</source>
+        <translation type="obsolete">Текущий язык изменен на %1</translation>
+    </message>
+    <message>
+        <source>Language changed to %1. The change will take effect after restarting the wallet.</source>
+        <translation>Язык изменен на %1. Изменение вступит в силу после перезапуска кошелька.</translation>
+    </message>
+    <message>
+        <source>Language changed to %1</source>
+        <translation>Язык изменен на %1</translation>
+    </message>
 </context>
 <context>
     <name>WalletGui::MiningFrame</name>
     <message>
         <source>Mining. Hashrate: %1 H/s</source>
-        <translation type="vanished">Майнинг идет. Хешрейт: %1 H/s</translation>
+        <translation>Майнинг идет. Хешрейт: %1 H/s</translation>
     </message>
     <message>
         <source>Error: %1</source>
@@ -1745,7 +1941,7 @@ Are you sure?</source>
         <translation>Майнинг соло. Скорость: %1 H/s</translation>
     </message>
     <message>
-        <source>Starting solo mining...</source>
+        <source>Starting solo minining...</source>
         <translation>Запуск майнинга соло...</translation>
     </message>
     <message>
@@ -1765,6 +1961,69 @@ Are you sure?</source>
     <message>
         <source>Node URL</source>
         <translation>Адрес узла</translation>
+    </message>
+</context>
+<context>
+    <name>WalletGui::OptimizationSettingsDialog</name>
+    <message>
+        <source>30 minutes</source>
+        <translation>30 мин.</translation>
+    </message>
+    <message>
+        <source>1 hour</source>
+        <translation>1 час</translation>
+    </message>
+    <message>
+        <source>1.5 hours</source>
+        <translation>1,5 часа</translation>
+    </message>
+    <message>
+        <source>2 hours</source>
+        <translation>2 часа</translation>
+    </message>
+    <message>
+        <source>2.5 hours</source>
+        <translation>2,5 часа</translation>
+    </message>
+    <message>
+        <source>3 hours</source>
+        <translation>3 часа</translation>
+    </message>
+    <message>
+        <source>3.5 hours</source>
+        <translation>3,5 часа</translation>
+    </message>
+    <message>
+        <source>4 hours</source>
+        <translation>4 часа</translation>
+    </message>
+    <message>
+        <source>4.5 hours</source>
+        <translation>4,5 часа</translation>
+    </message>
+    <message>
+        <source>5 hours</source>
+        <translation>5 часов</translation>
+    </message>
+    <message>
+        <source>5.5 hours</source>
+        <translation>5,5 часов</translation>
+    </message>
+    <message>
+        <source>6 hours</source>
+        <translation>6 часов</translation>
+    </message>
+    <message>
+        <source>Wallet is currently optimized for this target</source>
+        <translation>Кошелек в настоящее время оптимизирован для этой цели</translation>
+    </message>
+    <message>
+        <source> outputs below selected target</source>
+        <translation> выходов ниже выбранной цели</translation>
+    </message>
+    <message>
+        <source>Wallet is closed</source>
+        <translation>Кошелек закрыт</translation>
     </message>
 </context>
 <context>
@@ -1793,7 +2052,7 @@ Are you sure?</source>
     <name>WalletGui::ReceiveFrame</name>
     <message>
         <source>New PNG file</source>
-        <translation type="vanished">Новый PNG файл</translation>
+        <translation>Новый PNG файл</translation>
     </message>
     <message>
         <source>Save QR Code</source>
@@ -1837,6 +2096,66 @@ Are you sure?</source>
         <source>Available balance is insufficient to send this transaction. Have you excluded a fee?</source>
         <translation>Доступного баланса недостаточно для отправки этой транзакции. Вы не забыли отнять комиссию?</translation>
     </message>
+    <message>
+        <source>Low</source>
+        <translation>Низкий</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>Нормальный</translation>
+    </message>
+    <message>
+        <source>High</source>
+        <translation>Высокий</translation>
+    </message>
+    <message>
+        <source>Highest</source>
+        <translation>Наибольший</translation>
+    </message>
+    <message>
+        <source>Node fee: %1 %2</source>
+        <translation>Комиссия узла: %1 %2</translation>
+    </message>
+    <message>
+        <source>You have unmixable dust on balance. Use menu &apos;Wallet -&gt; Sweep unmixable&apos; first.</source>
+        <translation>У вас есть несмешываемый баланс. Сначала воспользуйтесь меню «Кошелек -&gt; Убрать несмешиваемое».</translation>
+    </message>
+</context>
+<context>
+    <name>WalletGui::SendGlassFrame</name>
+    <message>
+        <source>Synchronizing</source>
+        <translation>Идет синхронизация</translation>
+    </message>
+    <message>
+        <source>You will be able to send %1
+when the wallet is synchronized</source>
+        <translation>Вы сможете отправлять %1
+когда кошелек завершит синхронизацию</translation>
+    </message>
+</context>
+<context>
+    <name>WalletGui::SignMessageDialog</name>
+    <message>
+        <source>Sign message</source>
+        <translation>Подписать сообщение</translation>
+    </message>
+    <message>
+        <source>Verify signed message</source>
+        <translation>Проверка подписанного сообщения</translation>
+    </message>
+    <message>
+        <source>Signature is valid</source>
+        <translation>Подпись действительна</translation>
+    </message>
+    <message>
+        <source>Signature is invalid!</source>
+        <translation>Подпись недействительна!</translation>
+    </message>
+    <message>
+        <source>Address is invalid!</source>
+        <translation>Недопустимый адрес!</translation>
+    </message>
 </context>
 <context>
     <name>WalletGui::TransactionDetailsDialog</name>
@@ -1875,6 +2194,58 @@ Are you sure?</source>
             <numerusform>%n подтверждения</numerusform>
             <numerusform>%n подтверждений</numerusform>
         </translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Status: &lt;/span&gt;%1&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Date: &lt;/span&gt;%2&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;To: &lt;/span&gt;%4&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Amount: &lt;/span&gt;%5&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Fee: &lt;/span&gt;%6&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Payment ID: &lt;/span&gt;%7&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Transaction Hash: &lt;/span&gt;%8&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Transaction Key: &lt;/span&gt;%9&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Статус: &lt;/span&gt;%1&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Дата: &lt;/span&gt;%2&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Кому: &lt;/span&gt;%4&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Сумма: &lt;/span&gt;%5&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Комиссия: &lt;/span&gt;%6&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Идентификатор платежа: &lt;/span&gt;%7&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Хеш транзакции: &lt;/span&gt;%8&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Ключ транзакции: &lt;/span&gt;%9&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>(n/a)</source>
+        <translation>нет данных</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Status: &lt;/span&gt;%1&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Date: &lt;/span&gt;%2&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;To: &lt;/span&gt;%4&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Amount: &lt;/span&gt;%5&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Fee: &lt;/span&gt;%6&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Payment ID: &lt;/span&gt;%7&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Transaction Hash: &lt;/span&gt;%8&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Transaction Key: &lt;/span&gt;%9&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Transaction Proof: &lt;/span&gt;%10
+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Статус: &lt;/span&gt;%1&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Дата: &lt;/span&gt;%2&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Кому: &lt;/span&gt;%4&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Сумма: &lt;/span&gt;%5&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Комиссия: &lt;/span&gt;%6&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Идентификатор платежа: &lt;/span&gt;%7&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Хеш транзакции: &lt;/span&gt;%8&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Ключ транзакции: &lt;/span&gt;%9&lt;br&gt;
+&lt;span style=&quot; font-weight:600;&quot;&gt;Доказательство транзакции: &lt;/span&gt;%10
+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -2041,6 +2412,10 @@ Are you sure?</source>
             <numerusform>Исходящая транзакция, %n подтверждения</numerusform>
             <numerusform>Исходящая транзакция, %n подтверждений</numerusform>
         </translation>
+    </message>
+    <message>
+        <source>Key</source>
+        <translation>Ключ</translation>
     </message>
 </context>
 <context>
@@ -2212,6 +2587,30 @@ Are you sure?</source>
     <message>
         <source>Sweeping unmixable dust</source>
         <translation>Оптимизация несмешываемых выходов</translation>
+    </message>
+    <message>
+        <source>Optimizing wallet</source>
+        <translation>Оптимизация кошелька</translation>
+    </message>
+    <message>
+        <source>Failed to get the transaction proof</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to get the transaction proof.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to get the reserve proof</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is tracking wallet. The reserve proof can be generated only by a full wallet.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to get the reserve proof.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

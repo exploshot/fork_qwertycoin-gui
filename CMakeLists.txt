@@ -31,7 +31,7 @@ endif(WIN32)
 
 find_package(Boost 1.55 REQUIRED COMPONENTS date_time filesystem program_options regex serialization system thread chrono)
 if ((${Boost_MAJOR_VERSION} EQUAL 1) AND (${Boost_MINOR_VERSION} EQUAL 54))
-  message(SEND_ERROR "Boost version 1.54 is unsupported, more details are available here http://goo.gl/RrCFmA")
+	message(SEND_ERROR "Boost version 1.54 is unsupported, more details are available here http://goo.gl/RrCFmA")
 endif ()
 
 include_directories(${Boost_INCLUDE_DIRS})
@@ -65,6 +65,7 @@ set(CRYPTONOTE_SOURCES
   cryptonote/src/Common/ConsoleTools.cpp
   cryptonote/src/Common/MemoryInputStream.cpp
   cryptonote/src/Common/PathTools.cpp
+  cryptonote/src/Common/DnsTools.cpp
   cryptonote/src/Common/StdInputStream.cpp
   cryptonote/src/Common/StdOutputStream.cpp
   cryptonote/src/Common/StreamTools.cpp
@@ -77,14 +78,18 @@ set(CRYPTONOTE_SOURCES
   cryptonote/src/crypto/crypto-ops.c
   cryptonote/src/crypto/crypto.cpp
   cryptonote/src/crypto/groestl.c
+  cryptonote/src/crypto/hash-extra-blake.c
+  cryptonote/src/crypto/hash-extra-groestl.c
+  cryptonote/src/crypto/hash-extra-jh.c
+  cryptonote/src/crypto/hash-extra-skein.c
   cryptonote/src/crypto/hash.c
   cryptonote/src/crypto/jh.c
   cryptonote/src/crypto/keccak.c
+  cryptonote/src/crypto/oaes_lib.c
   cryptonote/src/crypto/random.c
   cryptonote/src/crypto/skein.c
-  cryptonote/src/crypto/cn_slow_hash_soft.cpp
-  cryptonote/src/crypto/cn_slow_hash_hard_intel.cpp
-  cryptonote/src/crypto/cn_slow_hash_hard_arm.cpp
+  cryptonote/src/crypto/slow-hash.c
+  cryptonote/src/crypto/slow-hash.cpp
   cryptonote/src/crypto/tree-hash.c
   cryptonote/src/CryptoNoteCore/BlockchainIndices.cpp
   cryptonote/src/CryptoNoteCore/BlockchainMessages.cpp
@@ -174,7 +179,6 @@ set(CRYPTONOTE_SOURCES
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
 file(GLOB_RECURSE HEADERS src/*.h)
-file(GLOB_RECURSE HEADERS src/*.hpp)
 file(GLOB_RECURSE FORMS src/gui/ui/*.ui)
 file(GLOB_RECURSE Mnemonics cryptonote/src/mnemonics/*)
 
@@ -186,11 +190,10 @@ qt5_add_resources(RCC ${QRC})
 
 if (WIN32)
   if (NOT MSVC)
-  message(FATAL_ERROR "Only MSVC is supported on this platform")
+	message(FATAL_ERROR "Only MSVC is supported on this platform")
   endif ()
   add_definitions(/D_CRT_SECURE_NO_WARNINGS /D_WIN32_WINNT=0x0600 /DSTATICLIB)
   include_directories(cryptonote/src/platform/msc)
-  
   set( CMAKE_CXX_FLAGS "-bigobj -EHsc")
   set(PLATFORM_DIR Windows)
   set(BUILD_PLATFORM WIN32)
@@ -224,7 +227,7 @@ elseif (UNIX)
 
     set(BUILD_PLATFORM MACOSX_BUNDLE)
     set(BUILD_RESOURCES ${APPLICATION_ICON})
-  
+	
     GET_TARGET_PROPERTY(QT_LIB_DIR "${Qt5Widgets_LIBRARIES}" LOCATION)
     GET_FILENAME_COMPONENT(QT_LIB_DIR "${QT_LIB_DIR}" PATH)
   else(APPLE)
@@ -243,7 +246,12 @@ set(CRYPTONOTE_SOURCES ${CRYPTONOTE_SOURCES} ${PLATFORM_SOURCES})
 add_library(${CRYPTONOTE_LIB} STATIC ${CRYPTONOTE_SOURCES})
 add_library(Mnemonics ${Mnemonics})
 set_target_properties(${CRYPTONOTE_LIB} PROPERTIES COMPILE_DEFINITIONS _GNU_SOURCE)
+
+if (APPLE OR ${CMAKE_SYSTEM_NAME} STREQUAL "Linux")
+target_link_libraries(${CRYPTONOTE_LIB} ${Boost_LIBRARIES} -lresolv)
+else ()
 target_link_libraries(${CRYPTONOTE_LIB} ${Boost_LIBRARIES})
+endif ()
 set_target_properties(Mnemonics PROPERTIES COMPILE_DEFINITIONS _GNU_SOURCE)
 target_link_libraries(Mnemonics ${Boost_LIBRARIES})
 
@@ -281,6 +289,7 @@ elseif (UNIX)
     install(FILES src/qwertycoinwallet.desktop DESTINATION share/applications)
     install(FILES src/images/qwertycoinz.png DESTINATION share/pixmaps RENAME qwertycoin.png)
     install(FILES copyright DESTINATION share/doc/qwertycoinwallet)
+    install(DIRECTORY src/languages DESTINATION /opt/qwertycoin/ FILES_MATCHING PATTERN "*.qm")
 
     if (NOT RPMBUILD)
         set(CPACK_GENERATOR DEB)
@@ -303,7 +312,7 @@ set(CPACK_PACKAGE_FILE_NAME "${CPACK_DEBIAN_PACKAGE_NAME}-${CPACK_PACKAGE_VERSIO
         set(CPACK_RPM_PACKAGE_REQUIRES "qt5-qtbase >= 5.3.2, qt5-qtbase-gui >= 5.3.2")
         set(CPACK_RPM_PACKAGE_SUMMARY "Qwertycoin QWC wallet")
         set(CPACK_RPM_PACKAGE_DESCRIPTION "Qwertycoin QWC wallet
- Qwertycoin is a decentrilized, privacy oriented peer-to-peer
+ Qwertycoin is Ukrainian decentralized, privacy oriented peer-to-peer
  cryptocurrency. It is open-source, nobody owns or controls Qwertycoin
  and everyone can take part.")
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}-${VERSION_RELEASE}${CPACK_SYSTEM_NAME}")

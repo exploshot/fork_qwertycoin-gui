@@ -50,6 +50,7 @@ private:
   void insertPaymentID(QString _paymentid);
   static bool isValidPaymentId(const QByteArray& _paymentIdString);
   void onAddressFound(const QString& _address);
+  double getMinimalFee();
   void reset();
 
   Q_SLOT void addRecipientClicked();
@@ -58,8 +59,10 @@ private:
   Q_SLOT void priorityValueChanged(int _value);
   Q_SLOT void amountValueChange();
   Q_SLOT void sendClicked();
+  Q_SLOT void sendAllClicked();
   Q_SLOT void openUriClicked();
   Q_SLOT void generatePaymentIdClicked();
+  Q_SLOT void advancedClicked(bool _show);
 
 Q_SIGNALS:
   void uriOpenSignal();
