@@ -101,7 +101,7 @@ void Settings::load() {
   }
 
   QStringList defaultNodesList;
-  defaultNodesList << "node-00.qwertycoin.org:8197" << "node-01.qwertycoin.org" << "node-02.qwertycoin.org" << "explorer.qwertycoin.org";
+  defaultNodesList << "node-00.qwertycoin.org:8197" << "node-01.qwertycoin.org:8197" << "node-02.qwertycoin.org:8197"  << "node-03.qwertycoin.org:8197"  << "node-04.qwertycoin.org:8197"  << "node-05.qwertycoin.org:8197" << "explorer.qwertycoin.org:8197";
   if (!m_settings.contains(OPTION_RPCNODES)) {
     setRpcNodesList(QStringList() << defaultNodesList);
   } else {
@@ -162,7 +162,7 @@ QStringList Settings::getPeers() const {
 
 QStringList Settings::getPriorityNodes() const {
   Q_ASSERT(m_cmdLineParser != nullptr);
-  return m_cmdLineParser->getPiorityNodes();
+  return m_cmdLineParser->getPriorityNodes();
 }
 
 QStringList Settings::getExclusiveNodes() const {
